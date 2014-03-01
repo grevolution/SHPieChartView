@@ -19,6 +19,8 @@
 		F255457118C1B4C20023D9AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F255455918C1B4C20023D9AD /* UIKit.framework */; };
 		F255457918C1B4C20023D9AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F255457718C1B4C20023D9AD /* InfoPlist.strings */; };
 		F255457B18C1B4C20023D9AD /* SHPieChartViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F255457A18C1B4C20023D9AD /* SHPieChartViewTests.m */; };
+		F255458718C1B4D70023D9AD /* SHPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F255458618C1B4D70023D9AD /* SHPieChartView.m */; };
+		F255458A18C1B4E10023D9AD /* SHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F255458918C1B4E10023D9AD /* SHRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		F255457618C1B4C20023D9AD /* SHPieChartViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHPieChartViewTests-Info.plist"; sourceTree = "<group>"; };
 		F255457818C1B4C20023D9AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F255457A18C1B4C20023D9AD /* SHPieChartViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPieChartViewTests.m; sourceTree = "<group>"; };
+		F255458518C1B4D70023D9AD /* SHPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPieChartView.h; sourceTree = "<group>"; };
+		F255458618C1B4D70023D9AD /* SHPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPieChartView.m; sourceTree = "<group>"; };
+		F255458818C1B4E10023D9AD /* SHRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRootViewController.h; sourceTree = "<group>"; };
+		F255458918C1B4E10023D9AD /* SHRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +113,11 @@
 		F255455B18C1B4C20023D9AD /* SHPieChartView */ = {
 			isa = PBXGroup;
 			children = (
+				F255458418C1B4D70023D9AD /* SHPieChartView */,
 				F255456418C1B4C20023D9AD /* SHAppDelegate.h */,
 				F255456518C1B4C20023D9AD /* SHAppDelegate.m */,
+				F255458818C1B4E10023D9AD /* SHRootViewController.h */,
+				F255458918C1B4E10023D9AD /* SHRootViewController.m */,
 				F255456718C1B4C20023D9AD /* Images.xcassets */,
 				F255455C18C1B4C20023D9AD /* Supporting Files */,
 			);
@@ -142,6 +151,15 @@
 				F255457718C1B4C20023D9AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F255458418C1B4D70023D9AD /* SHPieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				F255458518C1B4D70023D9AD /* SHPieChartView.h */,
+				F255458618C1B4D70023D9AD /* SHPieChartView.m */,
+			);
+			path = SHPieChartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F255458718C1B4D70023D9AD /* SHPieChartView.m in Sources */,
 				F255456218C1B4C20023D9AD /* main.m in Sources */,
 				F255456618C1B4C20023D9AD /* SHAppDelegate.m in Sources */,
+				F255458A18C1B4E10023D9AD /* SHRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
