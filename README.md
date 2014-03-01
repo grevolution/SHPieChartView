@@ -41,3 +41,5 @@ SHPieChartView
   
   [self.view addSubview:halfChart];
 ```
+
+![chart image](https://raw.github.com/grevolution/SHPieChartView/master/wiki-images/chart.png)
