@@ -47,7 +47,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 {
     [super viewDidLoad];
   
-  SHPieChartView *concentricPieChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 10, 200, 200) andStyle:kChartTypeSingle];
+  SHPieChartView *concentricPieChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 10, 200, 200)];
   concentricPieChart.chartBackgroundColor = UIColorFromRGB(0xFAFAFA);
   
   concentricPieChart.isConcentric = YES;
@@ -59,7 +59,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
   [self.view addSubview:concentricPieChart];
 
   
-  SHPieChartView *normalPieChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 230, 150, 150) andStyle:kChartTypeSingle];
+  SHPieChartView *normalPieChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 230, 150, 150)];
   
   [normalPieChart addAngleValue:0.40 andClolor:[UIColor redColor]];
   [normalPieChart addAngleValue:0.20 andClolor:[UIColor greenColor]];
@@ -68,7 +68,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
   
   [self.view addSubview:normalPieChart];
 
-  SHPieChartView *halfChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 400, 100, 100) andStyle:kChartTypeSingle];
+  SHPieChartView *halfChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
   [halfChart addAngleValue:0.40 andClolor:UIColorFromRGB(0x3C60A3)];
   
   [self.view addSubview:halfChart];

@@ -22,11 +22,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, kChartType) {
-  kChartTypeSingle = 1,
-  kChartTypeMultiple =2
-};
-
 struct ArcValue {
   CGColorRef color;
   CGFloat angle;
@@ -39,23 +34,6 @@ typedef struct ArcValue ArcValue;
   NSMutableArray *_valuesAndColors;
   
 }
-/**
- *  initialize the char view by providing the frame and the chart type. there are currently two chart types.
- *  
- *  - kChartTypeSingle : this will create a pi chart view with the single percentage value.
- *  - kChartTypeMultiple : this will create a full pie chart view with all the values provided.
- *
- *  @param frame     CGRect of the UIView
- *  @param chartType this will define what type of char tyou want to create.
- *
- *  @return will return an instance of SHPIChartView
- */
-- (instancetype)initWithFrame:(CGRect)frame andStyle:(kChartType)chartType;
-
-/**
- *  the type of the PI Chart.
- */
-@property(nonatomic) kChartType chartType;
 
 /**
  *  if you want to specify a background to the chart.

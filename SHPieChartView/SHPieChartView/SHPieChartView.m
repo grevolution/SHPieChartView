@@ -53,14 +53,6 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame andStyle:(kChartType)chartType;
-{
-  if((self = [self initWithFrame:frame])) {
-    _chartType = chartType;
-  }
-  return self;
-}
-
 - (void)bootstrap
 {
   self.backgroundColor = [UIColor clearColor];
