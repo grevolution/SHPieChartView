@@ -85,6 +85,10 @@
   [self setNeedsDisplay];
 }
 
+- (void)reset {
+  [_valuesAndColors removeAllObjects];
+}
+
 #pragma mark - drawing methods
 
 - (void)drawRect:(CGRect)rect

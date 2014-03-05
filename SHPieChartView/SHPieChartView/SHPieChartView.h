@@ -63,4 +63,9 @@ typedef struct ArcValue ArcValue;
  */
 - (void)insertAngleValue:(CGFloat)angle andClolor:(UIColor *)color atIndex:(int)index;
 
+
+/**
+ *  resets the current pies array
+ */
+- (void)reset;
 @end
