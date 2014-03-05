@@ -43,3 +43,7 @@ SHPieChartView
 ```
 
 ![chart image](https://raw.github.com/grevolution/SHPieChartView/master/wiki-images/chart.png)
+
+###LICENSE
+
+see [LICENSE](https://github.com/grevolution/SHPieChartView/blob/master/LICENSE)
