@@ -27,6 +27,10 @@
 #define DEG2RAD(val) (M_PI / 180) * (val)
 #define RADIUS_MARGIN 5
 
+@implementation ArcValueClass
+
+@end
+
 @implementation SHPieChartView
 {
   CGPoint _center;
@@ -46,11 +50,11 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-      [self bootstrap];
-    }
-    return self;
+  self = [super initWithFrame:frame];
+  if (self) {
+    [self bootstrap];
+  }
+  return self;
 }
 
 - (void)bootstrap
@@ -63,24 +67,22 @@
 
 - (void)addAngleValue:(CGFloat)angle andClolor:(UIColor *)color;
 {
-  ArcValue v;
-  v.color = color.CGColor;
+  ArcValueClass *v = [[ArcValueClass alloc] init];
+  v.color = color;
   v.angle = angle;
   
-  NSValue *value = [NSValue value:&v withObjCType:@encode(struct ArcValue)];
-  [_valuesAndColors addObject:value];
+  [_valuesAndColors addObject:v];
   
   [self setNeedsDisplay];
 }
 
 - (void)insertAngleValue:(CGFloat)angle andClolor:(UIColor *)color atIndex:(int)index;
 {
-  ArcValue v;
-  v.color = color.CGColor;
+  ArcValueClass *v = [[ArcValueClass alloc] init];
+  v.color = color;
   v.angle = angle;
   
-  NSValue *value = [NSValue value:&v withObjCType:@encode(struct ArcValue)];
-  [_valuesAndColors insertObject:value atIndex:index];
+  [_valuesAndColors insertObject:v atIndex:index];
   
   [self setNeedsDisplay];
 }
@@ -109,10 +111,8 @@
   
   [_valuesAndColors enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     
-    ArcValue v;
-    [(NSValue *)obj getValue:&v];
-    
-    CGColorRef color = v.color;
+    ArcValueClass *v = (ArcValueClass *)obj;
+    CGColorRef color = v.color.CGColor;
     CGFloat value = v.angle;
     
     CGFloat angleValue = (360 * value);
@@ -134,7 +134,7 @@
 void createAndFillArc(CGContextRef context, CGPathRef path, CGColorRef color) {
   CGContextSetFillColor(context, CGColorGetComponents(color));
   CGContextAddPath(context, path);
-
+  
   CGContextDrawPath(context, kCGPathFill);
 }
 

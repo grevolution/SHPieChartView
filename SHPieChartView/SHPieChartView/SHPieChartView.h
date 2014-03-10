@@ -22,12 +22,14 @@
 
 #import <UIKit/UIKit.h>
 
-struct ArcValue {
-  CGColorRef color;
-  CGFloat angle;
-};
 
-typedef struct ArcValue ArcValue;
+@interface ArcValueClass : NSObject
+
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic) CGFloat angle;
+
+@end
+
 
 @interface SHPieChartView : UIView <UIGestureRecognizerDelegate>
 {
