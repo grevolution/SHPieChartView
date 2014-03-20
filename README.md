@@ -3,6 +3,8 @@ SHPieChartView
 
 `SHPieChartView` is a simple reusable UIView Sublcass that creates Pie Charts.
 
+[![Build Status](https://travis-ci.org/grevolution/SHPieChartView.svg?branch=master)](https://travis-ci.org/grevolution/SHPieChartView)
+
 ##How to Use It
 
 ###Normal Pie Chart
