@@ -65,7 +65,7 @@
 
 #pragma mark - Pie addition methods
 
-- (void)addAngleValue:(CGFloat)angle andClolor:(UIColor *)color;
+- (void)addAngleValue:(CGFloat)angle andColor:(UIColor *)color;
 {
   ArcValueClass *v = [[ArcValueClass alloc] init];
   v.color = color;

@@ -12,10 +12,10 @@ SHPieChartView
 ```objective-c
   SHPieChartView *normalPieChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 230, 150, 150)];
   
-  [normalPieChart addAngleValue:0.40 andClolor:[UIColor redColor]];
-  [normalPieChart addAngleValue:0.20 andClolor:[UIColor greenColor]];
-  [normalPieChart addAngleValue:0.30 andClolor:[UIColor blueColor]];
-  [normalPieChart addAngleValue:0.10 andClolor:[UIColor orangeColor]];
+  [normalPieChart addAngleValue:0.40 andColor:[UIColor redColor]];
+  [normalPieChart addAngleValue:0.20 andColor:[UIColor greenColor]];
+  [normalPieChart addAngleValue:0.30 andColor:[UIColor blueColor]];
+  [normalPieChart addAngleValue:0.10 andColor:[UIColor orangeColor]];
   
   [self.view addSubview:normalPieChart];
 ```
@@ -30,7 +30,7 @@ SHPieChartView
   concentricPieChart.concentricRadius = 70;
   concentricPieChart.concentricColor = UIColorFromRGB(0x54525C);
   
-  [concentricPieChart addAngleValue:0.40 andClolor:[UIColor redColor]];
+  [concentricPieChart addAngleValue:0.40 andColor:[UIColor redColor]];
 
   [self.view addSubview:concentricPieChart];
  ```
@@ -39,7 +39,7 @@ SHPieChartView
 
 ```objective-c
   SHPieChartView *halfChart = [[SHPieChartView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
-  [halfChart addAngleValue:0.40 andClolor:UIColorFromRGB(0x3C60A3)];
+  [halfChart addAngleValue:0.40 andColor:UIColorFromRGB(0x3C60A3)];
   
   [self.view addSubview:halfChart];
 ```
