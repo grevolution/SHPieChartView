@@ -132,7 +132,7 @@
 }
 
 void createAndFillArc(CGContextRef context, CGPathRef path, CGColorRef color) {
-  CGContextSetFillColor(context, CGColorGetComponents(color));
+  CGContextSetFillColorWithColor(context, color);
   CGContextAddPath(context, path);
   
   CGContextDrawPath(context, kCGPathFill);
