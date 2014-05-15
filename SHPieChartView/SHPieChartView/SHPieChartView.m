@@ -76,7 +76,7 @@
   [self setNeedsDisplay];
 }
 
-- (void)insertAngleValue:(CGFloat)angle andClolor:(UIColor *)color atIndex:(int)index;
+- (void)insertAngleValue:(CGFloat)angle andColor:(UIColor *)color atIndex:(int)index;
 {
   ArcValueClass *v = [[ArcValueClass alloc] init];
   v.color = color;
