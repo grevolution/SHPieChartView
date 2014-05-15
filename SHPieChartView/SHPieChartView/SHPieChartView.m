@@ -138,10 +138,10 @@ void createAndFillArc(CGContextRef context, CGPathRef path, CGColorRef color) {
   CGContextDrawPath(context, kCGPathFill);
 }
 
-CGMutablePathRef createArc(CGPoint center, CGFloat radius, CGFloat startAngle, CGFloat endAndle) {
+CGMutablePathRef createArc(CGPoint center, CGFloat radius, CGFloat startAngle, CGFloat endAngle) {
   CGMutablePathRef path = CGPathCreateMutable();
   
-  CGPathAddArc(path, NULL, center.x, center.y, radius, startAngle, endAndle, 0);
+  CGPathAddArc(path, NULL, center.x, center.y, radius, startAngle, endAngle, 0);
   CGPathAddLineToPoint(path, NULL, center.x, center.y);
   CGPathCloseSubpath(path);
   
