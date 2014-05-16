@@ -65,7 +65,7 @@
 
 #pragma mark - Pie addition methods
 
-- (void)addAngleValue:(CGFloat)angle andClolor:(UIColor *)color;
+- (void)addAngleValue:(CGFloat)angle andColor:(UIColor *)color;
 {
   ArcValueClass *v = [[ArcValueClass alloc] init];
   v.color = color;
@@ -76,7 +76,7 @@
   [self setNeedsDisplay];
 }
 
-- (void)insertAngleValue:(CGFloat)angle andClolor:(UIColor *)color atIndex:(int)index;
+- (void)insertAngleValue:(CGFloat)angle andColor:(UIColor *)color atIndex:(int)index;
 {
   ArcValueClass *v = [[ArcValueClass alloc] init];
   v.color = color;
@@ -132,16 +132,16 @@
 }
 
 void createAndFillArc(CGContextRef context, CGPathRef path, CGColorRef color) {
-  CGContextSetFillColor(context, CGColorGetComponents(color));
+  CGContextSetFillColorWithColor(context, color);
   CGContextAddPath(context, path);
   
   CGContextDrawPath(context, kCGPathFill);
 }
 
-CGMutablePathRef createArc(CGPoint center, CGFloat radius, CGFloat startAngle, CGFloat endAndle) {
+CGMutablePathRef createArc(CGPoint center, CGFloat radius, CGFloat startAngle, CGFloat endAngle) {
   CGMutablePathRef path = CGPathCreateMutable();
   
-  CGPathAddArc(path, NULL, center.x, center.y, radius, startAngle, endAndle, 0);
+  CGPathAddArc(path, NULL, center.x, center.y, radius, startAngle, endAngle, 0);
   CGPathAddLineToPoint(path, NULL, center.x, center.y);
   CGPathCloseSubpath(path);
   

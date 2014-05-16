@@ -54,7 +54,7 @@
  *  @param angle    add the value between 0-1 to add a specific pie
  *  @param color    the color of the pie
  */
-- (void)addAngleValue:(CGFloat)angle andClolor:(UIColor *)color;
+- (void)addAngleValue:(CGFloat)angle andColor:(UIColor *)color;
 
 /**
  *  this method will insert the new pie in the pie chart instead of just adding it at the last place
@@ -63,7 +63,7 @@
  *  @param color    the color of the pie
  *  @param index    the index at which you want to add the pie
  */
-- (void)insertAngleValue:(CGFloat)angle andClolor:(UIColor *)color atIndex:(int)index;
+- (void)insertAngleValue:(CGFloat)angle andColor:(UIColor *)color atIndex:(int)index;
 
 
 /**
