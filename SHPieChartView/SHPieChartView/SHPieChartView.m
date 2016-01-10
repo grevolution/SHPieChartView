@@ -105,6 +105,7 @@
   if(_chartBackgroundColor) {
     CGMutablePathRef path = createArc(_center, _radius, ANGLE(0), ANGLE(360));
     createAndFillArc(context, path, _chartBackgroundColor.CGColor);
+    CGPathRelease(path);
   }
   
   __block CGFloat startAngle = 0;
@@ -120,6 +121,7 @@
     
     CGMutablePathRef path = createArc(_center, _radius, ANGLE(startAngle), ANGLE(endAngle));
     createAndFillArc(context, path, color);
+    CGPathRelease(path);
     
     startAngle += angleValue;
   }];
@@ -128,6 +130,7 @@
   if(_isConcentric && _concentricRadius > 0 && _concentricColor) {
     CGMutablePathRef path = createArc(_center, _concentricRadius, ANGLE(0), ANGLE(360));
     createAndFillArc(context, path, _concentricColor.CGColor);
+    CGPathRelease(path);
   }
 }
 
